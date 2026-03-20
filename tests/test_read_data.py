@@ -1,5 +1,5 @@
 import pytest
-from src.report_median_coffee import read_data, sort_data_desc
+from report_median_coffee import read_data, sort_data_desc
 
 
 def test_read_data_basic(data):

@@ -1,6 +1,6 @@
 import statistics
 import csv
-from src.utils import Reports
+from utils import Reports
 
 
 def read_data(files: list[str]) -> dict[str, list[float]]:

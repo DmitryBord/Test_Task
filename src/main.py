@@ -1,8 +1,8 @@
 import sys
 from tabulate import tabulate
 import argparse
-from src.utils import TypeReport, Reports
-from src.report_median_coffee import get_median_coffee
+from utils import TypeReport, Reports
+from report_median_coffee import get_median_coffee
 
 # Метод для регистрации новых репортов
 # Reports.registry_report("median-coffee", get_median_coffee,

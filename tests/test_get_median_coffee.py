@@ -1,4 +1,4 @@
-from src.report_median_coffee import get_median_coffee
+from report_median_coffee import get_median_coffee
 
 
 def test_get_median_coffee_basic(data):

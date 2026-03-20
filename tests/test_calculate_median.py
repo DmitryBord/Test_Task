@@ -1,5 +1,5 @@
 import pytest
-from src.report_median_coffee import calculate_median
+from report_median_coffee import calculate_median
 
 
 @pytest.mark.parametrize(
