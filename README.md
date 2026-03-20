@@ -7,6 +7,6 @@
 
 ## Пример работы
 
-![example(src/misc/img/example.png)
+![example](src/misc/img/example.png)
 
 
