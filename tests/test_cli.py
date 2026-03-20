@@ -13,7 +13,7 @@ from subprocess import run
 def test_cli_basic(data, name):
     f1, f2 = data
     result = run(
-        ["python", "src/main.py", "--files", str(f1), str(f2), "--report", "median-coffee"],
+        ["python", "-m", "src.main", "--files", str(f1), str(f2), "--report", "median-coffee"],
         capture_output=True, text=True
     )
     assert result.returncode == 0
@@ -24,7 +24,7 @@ def test_cli_unknown_report(data):
     file = data[0]
 
     result = run(
-        ["python", "src/main.py", "--files", str(file), "--report", "unknown"],
+        ["python", "-m", "src.main", "--files", str(file), "--report", "unknown"],
         capture_output=True, text=True
     )
 

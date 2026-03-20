@@ -1,5 +1,6 @@
 import statistics
 import csv
+from src.utils import Reports
 
 
 def read_data(files: list[str]) -> dict[str, list[float]]:
@@ -13,16 +14,16 @@ def read_data(files: list[str]) -> dict[str, list[float]]:
     return student_spending
 
 
-def calculate_median(amounts: list[float]) -> float | list:
-    if amounts:
-        amounts = statistics.median(amounts)
-    return amounts
+def calculate_median(amounts: list[float]) -> float:
+    result: float = statistics.median(amounts) if amounts else 0.0
+    return result
 
 
 def sort_data_desc(data: list[tuple[str, float]]) -> list[tuple[str, float]]:
     return sorted(data, key=lambda x: x[1], reverse=True)
 
 
+@Reports.registry(name="median-coffee", headers=["Student", "Median_coffee"])
 def get_median_coffee(files: list[str]) -> list[tuple[str, float]]:
     data: dict[str, list[float]] = read_data(files)
     result: list[tuple[str, float]] = [

@@ -1,12 +1,12 @@
 import sys
 from tabulate import tabulate
 import argparse
-from report_median_coffee import get_median_coffee
-from utils import TypeReport, Reports
+from src.utils import TypeReport, Reports
+from src.report_median_coffee import get_median_coffee
 
 # Метод для регистрации новых репортов
-Reports.registry_report("median-coffee", get_median_coffee,
-                        ["student", "Median_coffee"])
+# Reports.registry_report("median-coffee", get_median_coffee,
+#                         ["Student", "Median_coffee"])
 
 
 def get_args_from_cli():
@@ -19,7 +19,7 @@ def get_args_from_cli():
 
 def main():
     args = get_args_from_cli()
-    report: TypeReport = Reports.get_report(args.report)
+    report: TypeReport | None = Reports.get_report(args.report)
 
     if not report:
         print(f"Unknown report: {args.report}", file=sys.stderr)

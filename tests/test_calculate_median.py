@@ -19,4 +19,4 @@ def test_calculate_median_single_value():
 
 
 def test_calculate_median_empty():
-    assert calculate_median([]) == []
+    assert calculate_median([]) == 0.0
